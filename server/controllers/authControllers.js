@@ -112,7 +112,7 @@ const adminLogin = async(req, res)=>{
                 success: false, message: "Please try again with different username",
             });
         }
-
+        
         const comparePassword = await bcrypt.compare(password, admin.password);
         if(!comparePassword)
             return res.status(400).json({success: false, message: "Invalid credentials"});

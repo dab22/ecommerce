@@ -1,8 +1,12 @@
+
 const Razorpay = require("razorpay");
 const User = require("../models/User");
 const Product = require("../models/Product");
 const Order = require("../models/Order");
 const crypto = require("crypto");
+
+// console.log("KEY ID:", process.env.VITE_RAZORPAY_KEY_ID);
+// console.log("KEY SECRET:", process.env.RAZORPAY_KEY_SECRET);
 
 var { validatePaymentVerification } = require('razorpay/dist/utils/razorpay-utils');
 

@@ -20,10 +20,14 @@ const AdminLogin=()=>{
     const password = e.target.password.value.trim();
 
     if(!username || !password){
+     
+
       return toast.error("Please fill all the fields");
     }
 
     try{
+//        console.log("password:", password, typeof password);
+// console.log("username", username, typeof username);
       const res = await axios.post(import.meta.env.VITE_API_URL + "/admin-login", {username, password});
       const data = await res.data;
 
@@ -31,6 +35,7 @@ const AdminLogin=()=>{
       toast.success("login successfull");
       navigate("/admin/dashboard");
     } catch(error){
+      console.log("hi")
       toast.error(error.message);
     }
   }
