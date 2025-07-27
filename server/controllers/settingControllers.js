@@ -1,7 +1,7 @@
 const ROLES = require ("../utils/constants");
 const User = require("../models/User");
 const Admin = require("../models/Admin");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const changeUsername = async(req,res)=>{
     if(req.role !== ROLES.admin){
