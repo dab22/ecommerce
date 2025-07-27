@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SidebarInset } from "../ui/sidebar";
 import { Activity, CreditCard, IndianRupeeIcon, Users } from "lucide-react";
-import { Chart1 } from "./char1";
+import { Chart1 } from "./Chart1";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import useErrorLogout from "@/hooks/use-error-logout";
 import axios from "axios";
